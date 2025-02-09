@@ -1,0 +1,123 @@
+/* CSS Default */
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /* Pastikan padding dan border termasuk dalam ukuran elemen */
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    width: 90%; /* Ubah dari 1100px ke persentase */
+    max-width: 1100px; /* Batasi lebar maksimum */
+    margin: auto;
+    position: relative;
+}
+
+.logo a {
+    font-size: 2.5rem; /* Gunakan rem untuk font-size */
+    font-weight: 800;
+    float: left;
+    font-family: courier;
+    color: #10c3ab;
+}
+
+.menu {
+    float: right;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: #fefefe;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* CSS untuk Social Links */
+.social-links {
+    display: flex;
+    flex-direction: column; /* Membuat link berurutan ke bawah */
+    align-items: center; /* Pusatkan secara horizontal */
+    justify-content: center; /* Pusatkan secara vertikal */
+    margin-top: 50px; /* Jarak dari atas */
+}
+
+.social-link {
+    margin: 10px 0; /* Jarak antar link */
+    padding: 10px 20px; /* Padding untuk tombol */
+    background-color: #10c3ab; /* Warna background */
+    color: white; /* Warna teks */
+    border-radius: 5px; /* Sudut melengkung */
+    text-align: center; /* Teks di tengah */
+    font-size: 1.2rem; /* Ukuran font */
+    transition: background-color 0.3s ease; /* Animasi hover */
+    text-decoration: none; /* Hilangkan underline */
+}
+
+.social-link:hover {
+    background-color: #0d9f8a; /* Warna background saat hover */
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 95%; /* Lebih fleksibel untuk layar kecil */
+    }
+
+    .logo a {
+        font-size: 2rem; /* Perkecil font untuk layar kecil */
+    }
+
+    .menu {
+        float: none; /* Hapus float untuk tampilan mobile */
+        text-align: center; /* Pusatkan menu */
+    }
+
+    nav ul li {
+        float: none; /* Hapus float untuk tampilan mobile */
+        display: block; /* Buat menu vertikal */
+        padding: 10px 0; /* Tambahkan padding untuk tombol menu */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo a {
+        font-size: 1.5rem; /* Perkecil font untuk layar sangat kecil */
+    }
+
+    nav ul li a {
+        padding: 0px 8px; /* Kurangi padding untuk layar kecil */
+    }
+}
